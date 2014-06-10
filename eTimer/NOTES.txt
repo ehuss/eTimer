@@ -1,0 +1,24 @@
+Misc
+====
+- I'm very unhappy with the UILocalNotification.  One major problem is that
+  there does not appear to be a way to stop the sound.
+  An alternative is to make this a background app, with the rights necessary
+  to play sound from the background.  There might be a risk of having the
+  process suspended or killed, but keeping a local notification with no sound
+  (or the default sound) to wake the screen up.
+  It would be nice to figure out if it's possible to use private API's to
+  display the same kind of alert the stock alarm uses.
+
+Sounds
+======
+- Use CAF IMA4 format (decent compression), less than 30 seconds.
+  afconvert -f caff -d ima4 extreme_clock_alarm.mp3 extreme_clock_alarm.caf
+  
+Beta/Bugs
+=========
+- Unable to images like bell.png into Images.xcassets because it won't work
+  when deploying to iOS 7, per the xcode release notes:
+  
+    Images from asset catalogs in projects with a minimum deployment target of iOS 7 or OS X
+    10.9 will be available when running on iOS 8 and OS X 10.10, but not iOS 7 and OS X 10.9.
+    (17029658)

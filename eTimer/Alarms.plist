@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Alarms</key>
+	<array>
+		<dict>
+			<key>id</key>
+			<string>bliss</string>
+			<key>name</key>
+			<string>Bliss</string>
+			<key>path</key>
+			<string>Bliss.caf</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>extreme_clock_alarm</string>
+			<key>name</key>
+			<string>Extreme Alarm</string>
+			<key>path</key>
+			<string>extreme_clock_alarm.caf</string>
+		</dict>
+	</array>
+</dict>
+</plist>

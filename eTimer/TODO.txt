@@ -1,0 +1,35 @@
+- Make it prettier.
+
+- Keep counting after timer expires.
+  - If you miss the timer, lets you know how long ago you missed it.
+  - Unfortunately, can't detect a dismissed local notification.
+
+- Stopwatch mode.
+  - Enabled when you clear the timer to zero.
+
+- More alarms.
+
+- launch screen, etc.
+
+Themes
+======
+- Split the colors up more (need independent control over labels vs buttons, etc.)
+- Have fun adding more themes.
+  - Holidays: Halloween, Christmas, etc.
+  - Sports, National, other group-oriented colors.
+
+Future
+======
+- One could add many features to this.
+  - Nested alarms/themes.
+  - Downloadable alarms/themes.
+  - Support different devices (ipad mini, ipad, etc.).
+
+- Investigate more into how the stock Timer app overrides:
+  - mute switch
+  - force a large popup on screen
+  I suspect there is no way to do this on stock iOS.  People have noticed that
+  in some cases, Apple checks for com.apple bundle id's for some of their
+  private APIs.
+  I'm guessing that the stock Timer app runs as a background app, with
+  background audio rights.  See NOTES.txt for some notes on this.

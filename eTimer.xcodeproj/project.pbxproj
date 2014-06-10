@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		070ABFA91943E15100672379 /* ETTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070ABFA81943E15100672379 /* ETTimer.swift */; };
+		070D68B5194521A90006B357 /* ETAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 070D68B4194521A90006B357 /* ETAlert.m */; };
+		070D68BF19453C810006B357 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070D68BE19453C810006B357 /* AVFoundation.framework */; };
+		0733BBE81945AAA40040A870 /* ETAlarms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733BBE71945AAA40040A870 /* ETAlarms.swift */; };
+		0733BBEA1945ACFC0040A870 /* Alarms.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0733BBE91945ACFC0040A870 /* Alarms.plist */; };
+		0733BC2A19467CDD0040A870 /* bell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0733BC2919467CDD0040A870 /* bell@2x.png */; };
+		0733BC2E19469A420040A870 /* themesIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0733BC2D19469A420040A870 /* themesIcon@2x.png */; };
+		0733BC3019469D770040A870 /* themesIconDim@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0733BC2F19469D770040A870 /* themesIconDim@2x.png */; };
+		075BFF1B19457E30005ECEA3 /* Bliss.caf in Resources */ = {isa = PBXBuildFile; fileRef = 075BFF1A19457E30005ECEA3 /* Bliss.caf */; };
+		07A5857F1942DC1B0038C23C /* ETCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A5857E1942DC1B0038C23C /* ETCommon.swift */; };
+		07A585811942DDAA0038C23C /* Themes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07A585801942DDAA0038C23C /* Themes.plist */; };
+		07A585831942DF150038C23C /* ETThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A585821942DF150038C23C /* ETThemes.swift */; };
+		07A9760E194561130057E661 /* extreme_clock_alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07A9760D194561130057E661 /* extreme_clock_alarm.caf */; };
+		07C78E291942B0D400BC12AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C78E281942B0D400BC12AF /* AppDelegate.swift */; };
+		07C78E2B1942B0D400BC12AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C78E2A1942B0D400BC12AF /* ViewController.swift */; };
+		07C78E2E1942B0D400BC12AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C78E2C1942B0D400BC12AF /* Main.storyboard */; };
+		07C78E301942B0D400BC12AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C78E2F1942B0D400BC12AF /* Images.xcassets */; };
+		07C78E3C1942B0D400BC12AF /* eTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C78E3B1942B0D400BC12AF /* eTimerTests.swift */; };
+		07C78E481942B9F000BC12AF /* ETButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C78E471942B9F000BC12AF /* ETButton.swift */; };
+		07F02E3119439B9E000EB4D7 /* ETTimers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F02E3019439B9E000EB4D7 /* ETTimers.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07C78E361942B0D400BC12AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07C78E1B1942B0D400BC12AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07C78E221942B0D400BC12AF;
+			remoteInfo = eTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		070ABFA81943E15100672379 /* ETTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETTimer.swift; sourceTree = "<group>"; };
+		070D68B3194521A90006B357 /* eTimer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eTimer-Bridging-Header.h"; sourceTree = "<group>"; };
+		070D68B4194521A90006B357 /* ETAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAlert.m; sourceTree = "<group>"; };
+		070D68BA19453C0C0006B357 /* INFO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INFO; sourceTree = "<group>"; };
+		070D68BE19453C810006B357 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0733BBE71945AAA40040A870 /* ETAlarms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETAlarms.swift; sourceTree = "<group>"; };
+		0733BBE91945ACFC0040A870 /* Alarms.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Alarms.plist; sourceTree = "<group>"; };
+		0733BC2919467CDD0040A870 /* bell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bell@2x.png"; sourceTree = "<group>"; };
+		0733BC2D19469A420040A870 /* themesIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "themesIcon@2x.png"; sourceTree = "<group>"; };
+		0733BC2F19469D770040A870 /* themesIconDim@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "themesIconDim@2x.png"; sourceTree = "<group>"; };
+		075BFF18194562A6005ECEA3 /* NOTES.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NOTES.txt; path = eTimer/NOTES.txt; sourceTree = "<group>"; };
+		075BFF1A19457E30005ECEA3 /* Bliss.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bliss.caf; sourceTree = "<group>"; };
+		07A5857E1942DC1B0038C23C /* ETCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCommon.swift; sourceTree = "<group>"; };
+		07A585801942DDAA0038C23C /* Themes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Themes.plist; sourceTree = "<group>"; };
+		07A585821942DF150038C23C /* ETThemes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETThemes.swift; sourceTree = "<group>"; };
+		07A9760D194561130057E661 /* extreme_clock_alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = extreme_clock_alarm.caf; sourceTree = "<group>"; };
+		07C78E231942B0D400BC12AF /* eTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C78E271942B0D400BC12AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07C78E281942B0D400BC12AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		07C78E2A1942B0D400BC12AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		07C78E2D1942B0D400BC12AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07C78E2F1942B0D400BC12AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		07C78E351942B0D400BC12AF /* eTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C78E3A1942B0D400BC12AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07C78E3B1942B0D400BC12AF /* eTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eTimerTests.swift; sourceTree = "<group>"; };
+		07C78E471942B9F000BC12AF /* ETButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETButton.swift; sourceTree = "<group>"; };
+		07C78E4F1942D23B00BC12AF /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = eTimer/MyPlayground.playground; sourceTree = "<group>"; };
+		07C78E501942D29000BC12AF /* TODO.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = TODO.txt; path = eTimer/TODO.txt; sourceTree = "<group>"; };
+		07F02E3019439B9E000EB4D7 /* ETTimers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETTimers.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07C78E201942B0D400BC12AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				070D68BF19453C810006B357 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C78E321942B0D400BC12AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		070D68B619453C0C0006B357 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				07A9760D194561130057E661 /* extreme_clock_alarm.caf */,
+				070D68B819453C0C0006B357 /* ubuntu-touch */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		070D68B819453C0C0006B357 /* ubuntu-touch */ = {
+			isa = PBXGroup;
+			children = (
+				075BFF1A19457E30005ECEA3 /* Bliss.caf */,
+				070D68BA19453C0C0006B357 /* INFO */,
+			);
+			path = "ubuntu-touch";
+			sourceTree = "<group>";
+		};
+		0733BC1E19467B7A0040A870 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0733BC2F19469D770040A870 /* themesIconDim@2x.png */,
+				0733BC2D19469A420040A870 /* themesIcon@2x.png */,
+				0733BC2919467CDD0040A870 /* bell@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		07C78E1A1942B0D400BC12AF = {
+			isa = PBXGroup;
+			children = (
+				070D68BE19453C810006B357 /* AVFoundation.framework */,
+				07C78E501942D29000BC12AF /* TODO.txt */,
+				075BFF18194562A6005ECEA3 /* NOTES.txt */,
+				07C78E4F1942D23B00BC12AF /* MyPlayground.playground */,
+				07C78E251942B0D400BC12AF /* eTimer */,
+				07C78E381942B0D400BC12AF /* eTimerTests */,
+				07C78E241942B0D400BC12AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07C78E241942B0D400BC12AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07C78E231942B0D400BC12AF /* eTimer.app */,
+				07C78E351942B0D400BC12AF /* eTimerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07C78E251942B0D400BC12AF /* eTimer */ = {
+			isa = PBXGroup;
+			children = (
+				0733BC1E19467B7A0040A870 /* Images */,
+				070D68B619453C0C0006B357 /* Sounds */,
+				07A585801942DDAA0038C23C /* Themes.plist */,
+				0733BBE91945ACFC0040A870 /* Alarms.plist */,
+				07A5857E1942DC1B0038C23C /* ETCommon.swift */,
+				07C78E471942B9F000BC12AF /* ETButton.swift */,
+				0733BBE71945AAA40040A870 /* ETAlarms.swift */,
+				07A585821942DF150038C23C /* ETThemes.swift */,
+				07F02E3019439B9E000EB4D7 /* ETTimers.swift */,
+				070ABFA81943E15100672379 /* ETTimer.swift */,
+				070D68B4194521A90006B357 /* ETAlert.m */,
+				07C78E281942B0D400BC12AF /* AppDelegate.swift */,
+				07C78E2A1942B0D400BC12AF /* ViewController.swift */,
+				07C78E2C1942B0D400BC12AF /* Main.storyboard */,
+				07C78E2F1942B0D400BC12AF /* Images.xcassets */,
+				07C78E261942B0D400BC12AF /* Supporting Files */,
+				070D68B3194521A90006B357 /* eTimer-Bridging-Header.h */,
+			);
+			path = eTimer;
+			sourceTree = "<group>";
+		};
+		07C78E261942B0D400BC12AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07C78E271942B0D400BC12AF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07C78E381942B0D400BC12AF /* eTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				07C78E3B1942B0D400BC12AF /* eTimerTests.swift */,
+				07C78E391942B0D400BC12AF /* Supporting Files */,
+			);
+			path = eTimerTests;
+			sourceTree = "<group>";
+		};
+		07C78E391942B0D400BC12AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07C78E3A1942B0D400BC12AF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07C78E221942B0D400BC12AF /* eTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07C78E3F1942B0D400BC12AF /* Build configuration list for PBXNativeTarget "eTimer" */;
+			buildPhases = (
+				07C78E1F1942B0D400BC12AF /* Sources */,
+				07C78E201942B0D400BC12AF /* Frameworks */,
+				07C78E211942B0D400BC12AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eTimer;
+			productName = eTimer;
+			productReference = 07C78E231942B0D400BC12AF /* eTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07C78E341942B0D400BC12AF /* eTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07C78E421942B0D400BC12AF /* Build configuration list for PBXNativeTarget "eTimerTests" */;
+			buildPhases = (
+				07C78E311942B0D400BC12AF /* Sources */,
+				07C78E321942B0D400BC12AF /* Frameworks */,
+				07C78E331942B0D400BC12AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07C78E371942B0D400BC12AF /* PBXTargetDependency */,
+			);
+			name = eTimerTests;
+			productName = eTimerTests;
+			productReference = 07C78E351942B0D400BC12AF /* eTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07C78E1B1942B0D400BC12AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Eric Huss";
+				TargetAttributes = {
+					07C78E221942B0D400BC12AF = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					07C78E341942B0D400BC12AF = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 07C78E221942B0D400BC12AF;
+					};
+				};
+			};
+			buildConfigurationList = 07C78E1E1942B0D400BC12AF /* Build configuration list for PBXProject "eTimer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07C78E1A1942B0D400BC12AF;
+			productRefGroup = 07C78E241942B0D400BC12AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07C78E221942B0D400BC12AF /* eTimer */,
+				07C78E341942B0D400BC12AF /* eTimerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07C78E211942B0D400BC12AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0733BBEA1945ACFC0040A870 /* Alarms.plist in Resources */,
+				075BFF1B19457E30005ECEA3 /* Bliss.caf in Resources */,
+				07A585811942DDAA0038C23C /* Themes.plist in Resources */,
+				07A9760E194561130057E661 /* extreme_clock_alarm.caf in Resources */,
+				0733BC2A19467CDD0040A870 /* bell@2x.png in Resources */,
+				0733BC2E19469A420040A870 /* themesIcon@2x.png in Resources */,
+				07C78E2E1942B0D400BC12AF /* Main.storyboard in Resources */,
+				0733BC3019469D770040A870 /* themesIconDim@2x.png in Resources */,
+				07C78E301942B0D400BC12AF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C78E331942B0D400BC12AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07C78E1F1942B0D400BC12AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C78E2B1942B0D400BC12AF /* ViewController.swift in Sources */,
+				07F02E3119439B9E000EB4D7 /* ETTimers.swift in Sources */,
+				070ABFA91943E15100672379 /* ETTimer.swift in Sources */,
+				07C78E481942B9F000BC12AF /* ETButton.swift in Sources */,
+				07A585831942DF150038C23C /* ETThemes.swift in Sources */,
+				070D68B5194521A90006B357 /* ETAlert.m in Sources */,
+				0733BBE81945AAA40040A870 /* ETAlarms.swift in Sources */,
+				07A5857F1942DC1B0038C23C /* ETCommon.swift in Sources */,
+				07C78E291942B0D400BC12AF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C78E311942B0D400BC12AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C78E3C1942B0D400BC12AF /* eTimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07C78E371942B0D400BC12AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07C78E221942B0D400BC12AF /* eTimer */;
+			targetProxy = 07C78E361942B0D400BC12AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07C78E2C1942B0D400BC12AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07C78E2D1942B0D400BC12AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07C78E3D1942B0D400BC12AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07C78E3E1942B0D400BC12AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07C78E401942B0D400BC12AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = eTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "eTimer/eTimer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07C78E411942B0D400BC12AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = eTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "eTimer/eTimer-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		07C78E431942B0D400BC12AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/eTimer.app/eTimer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = eTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		07C78E441942B0D400BC12AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/eTimer.app/eTimer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = eTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07C78E1E1942B0D400BC12AF /* Build configuration list for PBXProject "eTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C78E3D1942B0D400BC12AF /* Debug */,
+				07C78E3E1942B0D400BC12AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07C78E3F1942B0D400BC12AF /* Build configuration list for PBXNativeTarget "eTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C78E401942B0D400BC12AF /* Debug */,
+				07C78E411942B0D400BC12AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07C78E421942B0D400BC12AF /* Build configuration list for PBXNativeTarget "eTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C78E431942B0D400BC12AF /* Debug */,
+				07C78E441942B0D400BC12AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07C78E1B1942B0D400BC12AF /* Project object */;
+}

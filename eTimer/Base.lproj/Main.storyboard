@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="eTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Timer 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oi6-Fm-HjR" userLabel="Timer 1 Text">
+                                <rect key="frame" x="0.0" y="20" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EoJ-g2-iP2"/>
+                                    <constraint firstAttribute="width" constant="106" id="mwy-QL-Kfk"/>
+                                </constraints>
+                                <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Timer 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6el-Kc-YTy" userLabel="Timer 2 Text">
+                                <rect key="frame" x="107" y="20" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="XBT-Lv-IYf"/>
+                                    <constraint firstAttribute="height" constant="30" id="gar-QV-X6x"/>
+                                </constraints>
+                                <color key="textColor" red="0.29803921570000003" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Timer 3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yf2-BD-EUr" userLabel="Timer 3 Text">
+                                <rect key="frame" x="214" y="20" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5KM-Yx-hEa"/>
+                                    <constraint firstAttribute="width" constant="106" id="Ie8-Cn-D5a"/>
+                                </constraints>
+                                <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlb-9r-PTy" userLabel="Timer 1 Counter Label">
+                                <rect key="frame" x="0.0" y="50" width="106" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="Rjs-ug-Kg2"/>
+                                    <constraint firstAttribute="height" constant="21" id="jw4-mV-6xf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPj-SX-qFp" userLabel="Timer 2 Counter Label">
+                                <rect key="frame" x="107" y="50" width="106" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="G2I-2B-emU"/>
+                                    <constraint firstAttribute="width" constant="106" id="ozN-fV-XEO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOI-TM-smO" userLabel="Timer 3 Counter Label">
+                                <rect key="frame" x="214" y="50" width="106" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="Cza-DC-Qch"/>
+                                    <constraint firstAttribute="height" constant="21" id="tx0-H7-AKY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLH-pp-Vbw" userLabel="Sample Timer Text">
+                                <rect key="frame" x="0.0" y="160" width="320" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="yx1-3P-3Cd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqq-AM-mjW" userLabel="Sample Counter Label">
+                                <rect key="frame" x="0.0" y="181" width="320" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="5sZ-ch-rXw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="72"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbN-HF-DmF" customClass="ETButton" customModule="eTimer" customModuleProvider="target">
+                                <rect key="frame" x="13" y="100" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="9yL-dN-gch"/>
+                                    <constraint firstAttribute="height" constant="64" id="P0U-KE-ZHM"/>
+                                </constraints>
+                                <state key="normal" title="+1 hr">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="etFont" value="HelveticaNeue-UltraLight"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="etFontSize">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapPlus1hr" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yc0-Zj-yfQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eH4-O9-OdU" customClass="ETButton" customModule="eTimer" customModuleProvider="target">
+                                <rect key="frame" x="250" y="251" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="4qf-AP-sk2"/>
+                                    <constraint firstAttribute="width" constant="64" id="Lk5-zc-MvZ"/>
+                                </constraints>
+                                <state key="normal" title="+15">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="etFont" value="HelveticaNeue-UltraLight"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="etFontSize">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapPlus15" destination="vXZ-lx-hvc" eventType="touchUpInside" id="X7w-Fg-4og"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZp-jW-rBO" customClass="ETButton" customModule="eTimer" customModuleProvider="target">
+                                <rect key="frame" x="204" y="324" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Ufq-J8-cQN"/>
+                                    <constraint firstAttribute="width" constant="64" id="oHz-tm-1sE"/>
+                                </constraints>
+                                <state key="normal" title="+5">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="etFont" value="HelveticaNeue-UltraLight"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="etFontSize">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapPlus5" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Or5-mI-fg6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="988-xg-mqd" customClass="ETButton" customModule="eTimer" customModuleProvider="target">
+                                <rect key="frame" x="135" y="373" width="64" height="64"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="9Ce-EB-2MY"/>
+                                    <constraint firstAttribute="width" constant="64" id="GDp-la-Pah"/>
+                                </constraints>
+                                <state key="normal" title="+1">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="etFont" value="HelveticaNeue-UltraLight"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="etFontSize">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapPlus1" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Rq9-Uj-PTG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZq-R5-b0k" customClass="ETButton" customModule="eTimer" customModuleProvider="target">
+                                <rect key="frame" x="40" y="275" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Byz-8Y-VwU"/>
+                                    <constraint firstAttribute="height" constant="90" id="yWN-P0-mfB"/>
+                                </constraints>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="etFont" value="HelveticaNeue"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="etFontSize">
+                                        <integer key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="etColorType" value="Green"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapStart" destination="vXZ-lx-hvc" eventType="touchUpInside" id="t2l-iJ-2O3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MV5-0n-vxR" customClass="ETButton" customModule="eTimer" customModuleProvider="target">
+                                <rect key="frame" x="14" y="381" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="1pN-QP-lVr"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZMg-cf-mGz"/>
+                                </constraints>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="etFont" value="HelveticaNeue"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="etFontSize">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="etColorType" value="Red"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapClear" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vkt-jC-0dQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thi-O8-O77" userLabel="Button Bell" customClass="ETButton" customModule="eTimer" customModuleProvider="target">
+                                <rect key="frame" x="265" y="425" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="VWK-4T-U1D"/>
+                                    <constraint firstAttribute="width" constant="46" id="zR6-ct-I8N"/>
+                                </constraints>
+                                <state key="normal" image="bell.png">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapBell" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aGe-sf-2qo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="WPj-SX-qFp" secondAttribute="centerX" id="6DF-BR-T5w"/>
+                            <constraint firstItem="WPj-SX-qFp" firstAttribute="top" secondItem="6el-Kc-YTy" secondAttribute="bottom" id="6bS-vV-lb1"/>
+                            <constraint firstItem="yf2-BD-EUr" firstAttribute="bottom" secondItem="HOI-TM-smO" secondAttribute="top" id="7wz-gh-hLo"/>
+                            <constraint firstItem="qqq-AM-mjW" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="93D-S8-5pX"/>
+                            <constraint firstItem="dLH-pp-Vbw" firstAttribute="bottom" secondItem="qqq-AM-mjW" secondAttribute="top" id="9Pd-Ok-MOA"/>
+                            <constraint firstItem="mlb-9r-PTy" firstAttribute="top" secondItem="oi6-Fm-HjR" secondAttribute="bottom" id="Btc-4N-eTj"/>
+                            <constraint firstItem="eH4-O9-OdU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="231" id="GD2-jd-UKT"/>
+                            <constraint firstItem="mlb-9r-PTy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="GhL-pI-jO0"/>
+                            <constraint firstAttribute="centerX" secondItem="dLH-pp-Vbw" secondAttribute="centerX" id="Hgr-zd-ZSt"/>
+                            <constraint firstAttribute="trailing" secondItem="988-xg-mqd" secondAttribute="trailing" constant="121" id="Jkp-GJ-aeE"/>
+                            <constraint firstItem="oi6-Fm-HjR" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="LBc-cI-KOy"/>
+                            <constraint firstItem="oi6-Fm-HjR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="O6U-Ww-X6n"/>
+                            <constraint firstItem="6el-Kc-YTy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Sxj-mG-LWx"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="thi-O8-O77" secondAttribute="bottom" constant="9" id="XKa-Z3-ZNz"/>
+                            <constraint firstItem="988-xg-mqd" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="353" id="Y5V-dx-qvC"/>
+                            <constraint firstItem="dbN-HF-DmF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="80" id="YFX-d5-s6e"/>
+                            <constraint firstItem="yf2-BD-EUr" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Z1D-tZ-Z1O"/>
+                            <constraint firstItem="MV5-0n-vxR" firstAttribute="top" secondItem="LZq-R5-b0k" secondAttribute="bottom" constant="16" id="cT8-IR-TUj"/>
+                            <constraint firstItem="dLH-pp-Vbw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="140" id="ceh-4X-9PD"/>
+                            <constraint firstAttribute="trailing" secondItem="thi-O8-O77" secondAttribute="trailing" constant="9" id="fn3-ZF-5bX"/>
+                            <constraint firstItem="MV5-0n-vxR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="14" id="gSj-HC-0B1"/>
+                            <constraint firstItem="hZp-jW-rBO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="304" id="kyS-7a-sRM"/>
+                            <constraint firstAttribute="trailing" secondItem="yf2-BD-EUr" secondAttribute="trailing" id="mHu-Eo-1kB"/>
+                            <constraint firstAttribute="centerX" secondItem="6el-Kc-YTy" secondAttribute="centerX" id="n1c-j9-eVg"/>
+                            <constraint firstAttribute="trailing" secondItem="hZp-jW-rBO" secondAttribute="trailing" constant="52" id="nsG-92-8we"/>
+                            <constraint firstItem="LZq-R5-b0k" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="40" id="rGw-VC-rAu"/>
+                            <constraint firstAttribute="trailing" secondItem="qqq-AM-mjW" secondAttribute="trailing" id="slU-mp-Qoa"/>
+                            <constraint firstItem="LZq-R5-b0k" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="255" id="t6p-C4-DQ7"/>
+                            <constraint firstAttribute="trailing" secondItem="HOI-TM-smO" secondAttribute="trailing" id="tVF-Pc-XB9"/>
+                            <constraint firstItem="dbN-HF-DmF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="13" id="uZF-Pk-Ujo"/>
+                            <constraint firstAttribute="trailing" secondItem="eH4-O9-OdU" secondAttribute="trailing" constant="6" id="xqH-xu-jfP"/>
+                            <constraint firstItem="dLH-pp-Vbw" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="yub-r2-Rxb"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
+                    <connections>
+                        <outlet property="alarmButton" destination="thi-O8-O77" id="CiH-EP-zQ4"/>
+                        <outlet property="clearButton" destination="MV5-0n-vxR" id="qA9-qX-GE5"/>
+                        <outlet property="plus15Button" destination="eH4-O9-OdU" id="dIS-8t-NgL"/>
+                        <outlet property="plus1Button" destination="988-xg-mqd" id="myQ-QI-iA2"/>
+                        <outlet property="plus5Button" destination="hZp-jW-rBO" id="gQ2-xr-7aH"/>
+                        <outlet property="plusHourButton" destination="dbN-HF-DmF" id="tON-aQ-1ZX"/>
+                        <outlet property="startButton" destination="LZq-R5-b0k" id="3YY-LD-Yly"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bell.png" width="29" height="29"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

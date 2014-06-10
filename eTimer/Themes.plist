@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Themes</key>
+	<array>
+		<dict>
+			<key>id</key>
+			<string>digit</string>
+			<key>name</key>
+			<string>Digit</string>
+			<key>backgroundFullColor</key>
+			<string>242424</string>
+			<key>backgroundEmptyColor</key>
+			<string>464646</string>
+			<key>softColor</key>
+			<string>0e86e7</string>
+			<key>greenColor</key>
+			<string>00ff00</string>
+			<key>redColor</key>
+			<string>ff0000</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>grey</string>
+			<key>name</key>
+			<string>50 Shades</string>
+			<key>backgroundFullColor</key>
+			<string>333739</string>
+			<key>backgroundEmptyColor</key>
+			<string>545b5e</string>
+			<key>softColor</key>
+			<string>ffffff</string>
+			<key>greenColor</key>
+			<string>ffffff</string>
+			<key>redColor</key>
+			<string>5b5b5b</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>pink</string>
+			<key>name</key>
+			<string>Pink Desire</string>
+			<key>backgroundFullColor</key>
+			<string>ff0080</string>
+			<key>backgroundEmptyColor</key>
+			<string>ff87c3</string>
+			<key>softColor</key>
+			<string>ffe519</string>
+			<key>greenColor</key>
+			<string>00ff00</string>
+			<key>redColor</key>
+			<string>4e0000</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>greenEnvy</string>
+			<key>name</key>
+			<string>Green Envy</string>
+			<key>backgroundFullColor</key>
+			<string>1d581e</string>
+			<key>backgroundEmptyColor</key>
+			<string>6bbf0a</string>
+			<key>softColor</key>
+			<string>0d260d</string>
+			<key>greenColor</key>
+			<string>00ff00</string>
+			<key>redColor</key>
+			<string>960000</string>
+		</dict>
+		<dict>
+			<key>redColor</key>
+			<string>ff0000</string>
+			<key>greenColor</key>
+			<string>008700</string>
+			<key>softColor</key>
+			<string>ffffff</string>
+			<key>backgroundEmptyColor</key>
+			<string>052ab6</string>
+			<key>backgroundFullColor</key>
+			<string>48b2fc</string>
+			<key>name</key>
+			<string>Sky Blue</string>
+			<key>id</key>
+			<string>skyBlue</string>
+		</dict>
+		<dict>
+			<key>redColor</key>
+			<string>000000</string>
+			<key>greenColor</key>
+			<string>ffdada</string>
+			<key>softColor</key>
+			<string>4b1012</string>
+			<key>backgroundEmptyColor</key>
+			<string>#db7d83</string>
+			<key>backgroundFullColor</key>
+			<string>#e43037</string>
+			<key>name</key>
+			<string>Passion</string>
+			<key>id</key>
+			<string>red</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>yellow</string>
+			<key>name</key>
+			<string>Mellow Yellow</string>
+			<key>backgroundFullColor</key>
+			<string>255, 239, 0</string>
+			<key>backgroundEmptyColor</key>
+			<string>255, 249, 168</string>
+			<key>softColor</key>
+			<string>77, 77, 0</string>
+		</dict>
+	</array>
+</dict>
+</plist>
