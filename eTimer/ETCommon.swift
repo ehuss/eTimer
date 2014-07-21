@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 let kTimerCount: Int = 3
 
@@ -45,5 +46,11 @@ extension String {
         var f: Float = 0
         NSScanner(string: self).scanFloat(&f)
         return f
+    }
+
+    func ET_asCGFlat() -> CGFloat {
+        var f: Float = 0
+        NSScanner(string: self).scanFloat(&f)
+        return CGFloat(f)
     }
 }

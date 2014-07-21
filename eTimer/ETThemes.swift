@@ -34,18 +34,18 @@ func colorFrom(colorInfo: String!, #defaultColor: UIColor) -> UIColor {
             if colorStr.hasPrefix("#") {
                 si = 1
             }
-            let red = Float(colorStr.ET_substring(si, end: si+2).ET_asInt(base: 16)) / 255.0
-            let green = Float(colorStr.ET_substring(si+2, end: si+4).ET_asInt(base: 16)) / 255.0
-            let blue = Float(colorStr.ET_substring(si+4, end: si+6).ET_asInt(base: 16)) / 255.0
+            let red = CGFloat(colorStr.ET_substring(si, end: si+2).ET_asInt(base: 16)) / 255.0
+            let green = CGFloat(colorStr.ET_substring(si+2, end: si+4).ET_asInt(base: 16)) / 255.0
+            let blue = CGFloat(colorStr.ET_substring(si+4, end: si+6).ET_asInt(base: 16)) / 255.0
             return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
 
         case 3, 4:
             // 3 rgb values in range [0,255] or [0,1] with optional alpha.
-            var parts = components.map { (part: String) -> Float in
-                if part.rangeOfString(".").isEmpty {
-                    return Float(part.ET_asInt(base: 16)) / 255.0
+            var parts = components.map { (part: String) -> CGFloat in
+                if part.rangeOfString(".")?.isEmpty {
+                    return CGFloat(part.ET_asInt(base: 16)) / 255.0
                 } else {
-                    return part.ET_asFloat()
+                    return CGFloat(part.ET_asFloat())
                 }
             }
             if parts.count == 3 {
@@ -101,14 +101,14 @@ class ETTheme {
 
 class ETThemes {
 
-    var themes: ETTheme[]!
+    var themes: [ETTheme]!
     var themeMap: Dictionary<String, ETTheme>!
 
     func load() {
         // I'm not certain why Swift won't allow me to set themes to an empty,
         // array (it makes it immuatable).  Something about it being an implicit
         // optional.
-        var a: ETTheme[] = []
+        var a: [ETTheme] = []
         var tmap: Dictionary<String, ETTheme> = [:]
         let themesPath = NSBundle.mainBundle().pathForResource("Themes", ofType: "plist")
         let themesData = NSDictionary(contentsOfFile: themesPath) as Dictionary<NSObject, AnyObject>

@@ -20,7 +20,7 @@ class ETTimers: NSObject, NSCoding {
         }
     }
 
-    var timers: ETTimer[]
+    var timers: [ETTimer]
     // The current timer being displayed.
     var currentTimerIndex: Int = 0
     var currentTimer: ETTimer {

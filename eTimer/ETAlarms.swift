@@ -31,14 +31,14 @@ class ETAlarm {
 }
 
 class ETAlarms {
-    var alarms: ETAlarm[]!
+    var alarms: [ETAlarm]!
     var alarmMap: Dictionary<String, ETAlarm>!
 
     func load() {
         // I'm not certain why Swift won't allow me to set themes to an empty,
         // array (it makes it immuatable).  Something about it being an implicit
         // optional.
-        var a: ETAlarm[] = []
+        var a: [ETAlarm] = []
         var amap: Dictionary<String, ETAlarm> = [:]
         let alarmsPath = NSBundle.mainBundle().pathForResource("Alarms", ofType: "plist")
         let alarmsData = NSDictionary(contentsOfFile: alarmsPath) as Dictionary<NSObject, AnyObject>

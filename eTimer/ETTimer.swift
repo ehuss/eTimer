@@ -16,25 +16,25 @@ let kETNotificationActiveTimerTick = "kETNotificationActiveTimerTick"
 
 // Settings for the Timer Name label at the top of the screen.
 let kETTimerNameFontName = "HelveticaNeue"
-let kETTimerNameFontSize: Float = 14.0
+let kETTimerNameFontSize: CGFloat = 14.0
 // Size for the timer name label when it is selected.
-let kETTimerNameFontSizeSelected: Float = 23.0
-let kETTimerNameY: Float = 20.0 // Status bar height.  Could use [UIApplication sharedApplication].statusBarFrame.size.height
-let kETTimerNameYSelected: Float = 147.0
-let kETTimerNameHeight: Float = 30.0
+let kETTimerNameFontSizeSelected: CGFloat = 23.0
+let kETTimerNameY: CGFloat = 20.0 // Status bar height.  Could use [UIApplication sharedApplication].statusBarFrame.size.height
+let kETTimerNameYSelected: CGFloat = 147.0
+let kETTimerNameHeight: CGFloat = 30.0
 
 // Settings for the Timer Count Label at the top of the screen
 let kETTimerCountFontName = "HelveticaNeue-Light"
-let kETTimerCountFontSize: Float = 18.0
+let kETTimerCountFontSize: CGFloat = 18.0
 // Size for the timer count when it is selected.
-let kETTimerCountFontSizeSelected: Float = 72.0
-let kETTimerCountY: Float = 34.0
-let kETTimerCountYSelected: Float = 170.0
-let kETTimerCountHeight: Float = 83.0
+let kETTimerCountFontSizeSelected: CGFloat = 72.0
+let kETTimerCountY: CGFloat = 34.0
+let kETTimerCountYSelected: CGFloat = 170.0
+let kETTimerCountHeight: CGFloat = 83.0
 
 // The height of the tap region to select a timer.  Should be roughly the
 // height of the two labels together.
-let kETTapEnableHeight: Float = 40.0
+let kETTapEnableHeight: CGFloat = 40.0
 
 // Format a duration in seconds into a string.
 func ETFormatDuration(duration: NSTimeInterval) -> String {
@@ -176,8 +176,8 @@ class ETTimer: NSObject, NSCoding, UIAlertViewDelegate {
     }
 
     func createLabelsInView(view: UIView) {
-        var timerWidth = view.frame.width/Float(kTimerCount)
-        var timerX = timerWidth*Float(timerIndex)
+        var timerWidth = view.frame.width/CGFloat(kTimerCount)
+        var timerX = timerWidth*CGFloat(timerIndex)
         labelX = timerX + timerWidth/2.0 - view.frame.width/2.0
 
         timerNameLayer = ETCreateCATextLayer()

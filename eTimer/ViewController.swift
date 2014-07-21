@@ -14,20 +14,20 @@ let kETTableCellIdentifier = "ETTableCellIdentifier"
 
 let kETNotificationNewTheme = "ETNotificationNewTheme"
 
-let kETBackGradientHeight: Float = 100.0
+let kETBackGradientHeight: CGFloat = 100.0
 
 class ViewController: UIViewController, UITextFieldDelegate, UITabBarDelegate {
                             
 //    var backgroundView : UIView!
     var backgroundLayer: CAGradientLayer!
 
-    @IBOutlet var plusHourButton : ETButton
-    @IBOutlet var plus15Button : ETButton
-    @IBOutlet var plus5Button : ETButton
-    @IBOutlet var plus1Button : ETButton
-    @IBOutlet var startButton : ETButton
-    @IBOutlet var clearButton : ETButton
-    @IBOutlet var alarmButton : ETButton
+    @IBOutlet var plusHourButton : ETButton!
+    @IBOutlet var plus15Button : ETButton!
+    @IBOutlet var plus5Button : ETButton!
+    @IBOutlet var plus1Button : ETButton!
+    @IBOutlet var startButton : ETButton!
+    @IBOutlet var clearButton : ETButton!
+    @IBOutlet var alarmButton : ETButton!
 
     /***********************************************************************/
     // MARK: Setup
@@ -113,10 +113,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UITabBarDelegate {
         let newTheme = ETGetCurrentTheme()
         // ETTimer will handle updates to the timer labels.
         backgroundLayer.colors = [
-            newTheme.backgroundEmptyColor.CGColor,
-            newTheme.backgroundEmptyColor.CGColor,
-            newTheme.backgroundFullColor.CGColor,
-            newTheme.backgroundFullColor.CGColor,
+            newTheme.backgroundEmptyColor.CGColor as AnyObject,
+            newTheme.backgroundEmptyColor.CGColor as AnyObject,
+            newTheme.backgroundFullColor.CGColor as AnyObject,
+            newTheme.backgroundFullColor.CGColor as AnyObject,
         ]
         // Buttons update their colors themselves.
     }
@@ -128,11 +128,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UITabBarDelegate {
     func updateBackground() {
         // Determine how far along the current timer is as a percentage.
         let t = sharedTimers.currentTimer
-        let progress: Float = t.duration == 0 ? 0 : 1.0 - Float(t.durationRemaining) / Float(t.duration)
+        let progress: CGFloat = t.duration == 0 ? 0 : 1.0 - CGFloat(t.durationRemaining) / CGFloat(t.duration)
         // The y coordinate at the start.
-        let a: Float = -view.frame.height-kETBackGradientHeight
+        let a: CGFloat = -view.frame.height-kETBackGradientHeight
         // The y coordinate at the end.
-        let b: Float = 0.0
+        let b: CGFloat = 0.0
         // lerp
         let y = a + progress*(b - a)
         let bgf = backgroundLayer.frame

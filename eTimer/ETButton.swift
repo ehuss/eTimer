@@ -54,7 +54,7 @@ class ETButton: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         if etFont {
-            let font = UIFont(name: etFont, size: (etFontSize ? etFontSize.floatValue : 12))
+            let font = UIFont(name: etFont, size: CGFloat(etFontSize ? etFontSize.floatValue : 12))
             assert(font != nil)
             titleLabel.font = font
         }
