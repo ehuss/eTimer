@@ -18,14 +18,9 @@ class ETAlarm {
 
     init(data: Dictionary<String, AnyObject>, index: Int) {
         alarmIndex = index
-        // For some reason, Swift won't allow a direct conversion to String.
-        // "as String?" causes the compiler to crash.
-        var c: AnyObject? = data["name"]
-        name = c as String
-        c = data["id"]
-        id = c as String
-        c = data["path"]
-        path = c as String
+        name = data["name"]! as String
+        id = data["id"]! as String
+        path = data["path"]! as String
     }
 
 }

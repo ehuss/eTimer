@@ -42,7 +42,7 @@ func colorFrom(colorInfo: String!, #defaultColor: UIColor) -> UIColor {
         case 3, 4:
             // 3 rgb values in range [0,255] or [0,1] with optional alpha.
             var parts = components.map { (part: String) -> CGFloat in
-                if part.rangeOfString(".")?.isEmpty {
+                if part.rangeOfString(".") != nil {
                     return CGFloat(part.ET_asInt(base: 16)) / 255.0
                 } else {
                     return CGFloat(part.ET_asFloat())
@@ -76,13 +76,11 @@ class ETTheme {
 
     init(data: Dictionary<String, AnyObject>, index: Int) {
         themeIndex = index
-        // For some reason, Swift won't allow a direct conversion to String.
-        // "as String?" causes the compiler to crash.
-        var c: AnyObject? = data["name"]
-        name = c as String
-        c = data["id"]
-        id = c as String
-        c = data["backgroundFullColor"]
+        name = data["name"]! as String
+        id = data["id"]! as String
+        // I cannot find a way to get Swift to convert the AnyObject? to
+        // String? directly in assignment.
+        var c: AnyObject? = data["backgroundFullColor"];
         backgroundFullColor = colorFrom(c as? String, defaultColor: UIColor.whiteColor())
         c = data["backgroundEmptyColor"]
         backgroundEmptyColor = colorFrom(c as? String, defaultColor: UIColor.whiteColor())

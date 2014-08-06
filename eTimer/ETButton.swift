@@ -43,11 +43,11 @@ class ETButton: UIButton {
     }
 
     // Must implement the designated initializer, else it will crash.
-    init(coder aDecoder: NSCoder!)  {
+    required init(coder aDecoder: NSCoder!)  {
         super.init(coder: aDecoder)
     }
 
-    init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
     }
 

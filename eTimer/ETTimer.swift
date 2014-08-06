@@ -328,7 +328,7 @@ class ETTimer: NSObject, NSCoding, UIAlertViewDelegate {
         // for 5 minutes).  Alternatively it could loop forever.  This is
         // also a candidate for a configurable setting.
         audioPlayer.numberOfLoops = 9
-        if error {
+        if error != nil {
             println("Error playing file \(error)")
         } else {
             println("Playing")
@@ -398,7 +398,7 @@ class ETTimer: NSObject, NSCoding, UIAlertViewDelegate {
     }
 
     // MARK: NSCoding
-    convenience init(coder aDecoder: NSCoder!) {
+    convenience required init(coder aDecoder: NSCoder!) {
         self.init(
             name: aDecoder.decodeObjectForKey("name") as String,
             duration: aDecoder.decodeObjectForKey("duration") as NSTimeInterval,

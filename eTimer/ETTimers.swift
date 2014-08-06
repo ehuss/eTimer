@@ -29,7 +29,7 @@ class ETTimers: NSObject, NSCoding {
         }
     }
 
-    init() {
+    override init() {
         timers = []
     }
 
@@ -50,7 +50,7 @@ class ETTimers: NSObject, NSCoding {
     }
 
     // MARK: NSCoding
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder!) {
         timers = aDecoder.decodeObjectForKey("timers") as Array<ETTimer>
         currentTimerIndex = aDecoder.decodeObjectForKey("currentTimerIndex") as Int
     }

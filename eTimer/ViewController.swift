@@ -435,7 +435,7 @@ class ETAlarmTable: ETThemeTableBase {
             audioPlayer.stop()
         }
         audioPlayer = AVAudioPlayer(contentsOfURL: url, error: &error)
-        if error {
+        if error != nil {
             println("Error playing file \(error)")
         } else {
             println("Playing")
