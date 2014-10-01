@@ -36,7 +36,7 @@ class ETAlarms {
         var a: [ETAlarm] = []
         var amap: Dictionary<String, ETAlarm> = [:]
         let alarmsPath = NSBundle.mainBundle().pathForResource("Alarms", ofType: "plist")
-        let alarmsData = NSDictionary(contentsOfFile: alarmsPath) as Dictionary<NSObject, AnyObject>
+        let alarmsData = NSDictionary(contentsOfFile: alarmsPath!) as Dictionary<NSObject, AnyObject>
         let rawAlarms = alarmsData["Alarms"] as NSArray
         for alarmDict: AnyObject in rawAlarms {
             // Unfortunately can't seem to cast directly to this in iterator.

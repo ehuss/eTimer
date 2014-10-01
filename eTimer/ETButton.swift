@@ -27,7 +27,7 @@ class ETButton: UIButton {
 
     func updateEtColor() {
         var selectedColor: UIColor = ETGetCurrentTheme().softColor
-        if etColorType {
+        if (etColorType != nil) {
             if let cType = ETColorTypes.fromRaw(etColorType) {
                 switch cType {
                 case ETColorTypes.Green:
@@ -43,7 +43,7 @@ class ETButton: UIButton {
     }
 
     // Must implement the designated initializer, else it will crash.
-    required init(coder aDecoder: NSCoder!)  {
+    required init(coder aDecoder: NSCoder)  {
         super.init(coder: aDecoder)
     }
 
@@ -53,10 +53,9 @@ class ETButton: UIButton {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        if etFont {
-            let font = UIFont(name: etFont, size: CGFloat(etFontSize ? etFontSize.floatValue : 12))
-            assert(font != nil)
-            titleLabel.font = font
+        if (etFont != nil) {
+            let font = UIFont(name: etFont, size: CGFloat(etFontSize != nil ? etFontSize.floatValue : 12))
+            titleLabel!.font = font
         }
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "updateTheme", name: kETNotificationNewTheme, object: nil)
@@ -65,19 +64,19 @@ class ETButton: UIButton {
 
     func updateTheme() {
         updateEtColor()
-        if currentImage {
+        if (currentImage != nil) {
             tintColor = ETGetCurrentTheme().softColor
         }
     }
 
-    override func beginTrackingWithTouch(touch: UITouch!, withEvent event: UIEvent!) -> Bool {
+    override func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent) -> Bool {
         super.beginTrackingWithTouch(touch, withEvent: event)
         // Allow the background color to update in drawRect.
         setNeedsDisplay()
         return true
     }
 
-    override func endTrackingWithTouch(touch: UITouch!, withEvent event: UIEvent!) {
+    override func endTrackingWithTouch(touch: UITouch, withEvent event: UIEvent) {
         super.endTrackingWithTouch(touch, withEvent: event)
         // Allow the background color to update in drawRect.
         setNeedsDisplay()

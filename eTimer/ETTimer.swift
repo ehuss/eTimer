@@ -241,7 +241,7 @@ class ETTimer: NSObject, NSCoding, UIAlertViewDelegate {
     func addTime(seconds: NSTimeInterval) {
         duration += seconds
         durationRemaining += seconds
-        if timerEndDate {
+        if (timerEndDate != nil) {
             // The timer is currently running, give it more time.
             timerEndDate = NSDate(timeIntervalSinceNow: NSTimeInterval(durationRemaining))
             scheduleNotification()
@@ -249,27 +249,27 @@ class ETTimer: NSObject, NSCoding, UIAlertViewDelegate {
     }
 
     func isRunning() -> Bool {
-        if timerEndDate {
+        if (timerEndDate != nil) {
             return timerEndDate.timeIntervalSinceNow > 0
         }
         return false
     }
 
     func start() {
-        if !timer {
+        if timer == nil {
             timerEndDate = NSDate(timeIntervalSinceNow: NSTimeInterval(durationRemaining))
             scheduleTimer()
             scheduleNotification()
         }
     }
     func scheduleTimer() {
-        assert(!timer)
+        assert(timer == nil)
         timer = NSTimer.scheduledTimerWithTimeInterval(0.1,
             target: self, selector: "timerFired:", userInfo: nil, repeats: true)
     }
 
     func scheduleNotification() {
-        if localNotif {
+        if (localNotif != nil) {
             UIApplication.sharedApplication().cancelLocalNotification(localNotif)
         }
         localNotif = UILocalNotification()
@@ -282,11 +282,11 @@ class ETTimer: NSObject, NSCoding, UIAlertViewDelegate {
     }
 
     func pause() {
-        if timer {
+        if (timer != nil) {
             timer.invalidate()
             timer = nil
             timerEndDate = nil
-            if localNotif {
+            if (localNotif != nil) {
                 UIApplication.sharedApplication().cancelLocalNotification(localNotif)
                 localNotif = nil
             }
@@ -320,7 +320,8 @@ class ETTimer: NSObject, NSCoding, UIAlertViewDelegate {
         ETShowAlert(alertText, nil, self, "OK")
 
 //        var path = NSBundle.mainBundle().pathForResource("extreme_clock_alarm", ofType: "caf")
-        var path = String.pathWithComponents([NSBundle.mainBundle().resourcePath, alarm.path])
+        var components = [NSBundle.mainBundle().resourcePath!, alarm.path];
+        var path = String.pathWithComponents(components)
         var url = NSURL(fileURLWithPath: path)
         var error: NSError?
         audioPlayer = AVAudioPlayer(contentsOfURL: url, error: &error)
@@ -349,19 +350,19 @@ class ETTimer: NSObject, NSCoding, UIAlertViewDelegate {
 
     func resignActive() {
         // Stop any active alarms.
-        if audioPlayer {
+        if (audioPlayer != nil) {
             audioPlayer.stop()
             ETVibrateStop()
         }
         // Disable the display timer.
-        if timer {
+        if (timer != nil) {
             timer.invalidate()
             timer = nil
         }
     }
 
     func enterForeground() {
-        if timerEndDate {
+        if (timerEndDate != nil) {
             // The timer should be running.
             let interval = timerEndDate.timeIntervalSinceNow
             if interval > 0 {
@@ -373,7 +374,7 @@ class ETTimer: NSObject, NSCoding, UIAlertViewDelegate {
                 timerEndDate = nil
                 // Unfortunately there does not appear to be a way to stop
                 // a UILocalNotification sound.
-                if localNotif {
+                if (localNotif != nil) {
                     UIApplication.sharedApplication().cancelLocalNotification(localNotif)
                     localNotif = nil
                 }
@@ -386,7 +387,7 @@ class ETTimer: NSObject, NSCoding, UIAlertViewDelegate {
 
     // Reload timers after app launch.
     func resumeSuspendedTimer() {
-        if timerEndDate {
+        if (timerEndDate != nil) {
             // Process exited while a timer was running.
             if timerEndDate.timeIntervalSinceNow > 0 {
                 // And the timer should still be running.
@@ -398,7 +399,7 @@ class ETTimer: NSObject, NSCoding, UIAlertViewDelegate {
     }
 
     // MARK: NSCoding
-    convenience required init(coder aDecoder: NSCoder!) {
+    convenience required init(coder aDecoder: NSCoder) {
         self.init(
             name: aDecoder.decodeObjectForKey("name") as String,
             duration: aDecoder.decodeObjectForKey("duration") as NSTimeInterval,
@@ -410,7 +411,7 @@ class ETTimer: NSObject, NSCoding, UIAlertViewDelegate {
         timerEndDate = aDecoder.decodeObjectForKey("timerEndDate") as? NSDate
     }
 
-    func encodeWithCoder(aCoder: NSCoder!) {
+    func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(name, forKey: "name")
         aCoder.encodeObject(duration, forKey: "duration")
         aCoder.encodeObject(durationRemaining, forKey: "durationRemaining")

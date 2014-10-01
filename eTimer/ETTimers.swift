@@ -50,12 +50,12 @@ class ETTimers: NSObject, NSCoding {
     }
 
     // MARK: NSCoding
-    required init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder) {
         timers = aDecoder.decodeObjectForKey("timers") as Array<ETTimer>
         currentTimerIndex = aDecoder.decodeObjectForKey("currentTimerIndex") as Int
     }
 
-    func encodeWithCoder(aCoder: NSCoder!) {
+    func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(timers as AnyObject, forKey: "timers")
         aCoder.encodeObject(currentTimerIndex as AnyObject, forKey: "currentTimerIndex")
     }

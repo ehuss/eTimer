@@ -59,7 +59,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITabBarDelegate {
             name: kETNotificationActiveTimerTick, object: nil)
 
         // Unforutnately you can't set the image rendering mode in Interface Builder.
-        var i = alarmButton.imageView.image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        var i = alarmButton.imageView!.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         alarmButton.setImage(i, forState: UIControlState.Normal)
 
         // Assuming that viewDidLoad() is the same as app launching, which is
@@ -154,7 +154,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITabBarDelegate {
 
     // A tap event on one of the timers at the top of the screen.
     func switchTimerTap(recognizer: UITapGestureRecognizer) {
-        let toTimerIndex = recognizer.view.tag
+        let toTimerIndex = recognizer.view!.tag
         if sharedTimers.currentTimerIndex != toTimerIndex {
             var oldTimer = sharedTimers.currentTimer
             var newTimer = sharedTimers.timers[toTimerIndex]
@@ -267,7 +267,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITabBarDelegate {
     var alarmTable = ETAlarmTable()
 
     func showThemeSelection() {
-        if !themeView {
+        if themeView == nil {
             // Create all the views necessary for selecting the theme and alarm.
             let width = view.frame.width/2.0
 
@@ -344,14 +344,14 @@ class ViewController: UIViewController, UITextFieldDelegate, UITabBarDelegate {
 /*****************************************************************************/
 class ETThemeTableBase: NSObject, UITableViewDataSource, UITableViewDelegate {
     // MARK: UITableViewDataSource
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(kETTableCellIdentifier) as UITableViewCell!
-        if !cell {
+        if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Default,
                 reuseIdentifier: kETTableCellIdentifier)
-            cell.textLabel.adjustsFontSizeToFitWidth = true
+            cell.textLabel!.adjustsFontSizeToFitWidth = true
         }
-        cell.textLabel.text = textForCellAtIndex(indexPath.row)
+        cell.textLabel!.text = textForCellAtIndex(indexPath.row)
         if indexPath.row == currentCheckedIndex() {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark
         } else {
@@ -361,7 +361,7 @@ class ETThemeTableBase: NSObject, UITableViewDataSource, UITableViewDelegate {
     }
 
     // Subclass must implement.
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
     func textForCellAtIndex(index: Int) -> String {
@@ -378,7 +378,7 @@ class ETThemeTableBase: NSObject, UITableViewDataSource, UITableViewDelegate {
             oldCell.accessoryType = UITableViewCellAccessoryType.None
         }
         let cell = tableView.cellForRowAtIndexPath(indexPath)
-        cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        cell!.accessoryType = UITableViewCellAccessoryType.Checkmark
     }
 
 }
@@ -387,7 +387,7 @@ class ETThemeTableBase: NSObject, UITableViewDataSource, UITableViewDelegate {
 
 class ETThemeTable: ETThemeTableBase {
 
-    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sharedThemes.themes.count
     }
     override func textForCellAtIndex(index: Int) -> String {
@@ -412,7 +412,7 @@ class ETAlarmTable: ETThemeTableBase {
 
     var audioPlayer: AVAudioPlayer! = nil
 
-    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sharedAlarms.alarms.count
     }
     override func textForCellAtIndex(index: Int) -> String {
@@ -428,10 +428,11 @@ class ETAlarmTable: ETThemeTableBase {
         let newAlarm = sharedAlarms.alarms[indexPath.row]
         sharedTimers.currentTimer.alarmId = newAlarm.id
 
-        var path = String.pathWithComponents([NSBundle.mainBundle().resourcePath, newAlarm.path])
+        var components = [NSBundle.mainBundle().resourcePath!, newAlarm.path]
+        var path = String.pathWithComponents(components)
         var url = NSURL(fileURLWithPath: path)
         var error: NSError?
-        if audioPlayer {
+        if audioPlayer != nil {
             audioPlayer.stop()
         }
         audioPlayer = AVAudioPlayer(contentsOfURL: url, error: &error)

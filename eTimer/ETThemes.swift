@@ -21,7 +21,7 @@ import UIKit
 // If colorInfo is nil, will return the given defaultColor.
 func colorFrom(colorInfo: String!, #defaultColor: UIColor) -> UIColor {
 
-    if colorInfo {
+    if (colorInfo != nil) {
         let components = colorInfo.componentsSeparatedByString(", ")
         switch components.count {
         case 0:
@@ -80,6 +80,8 @@ class ETTheme {
         id = data["id"]! as String
         // I cannot find a way to get Swift to convert the AnyObject? to
         // String? directly in assignment.
+        // According to: https://devforums.apple.com/thread/239557?tstart=0
+        // this is a bug.
         var c: AnyObject? = data["backgroundFullColor"];
         backgroundFullColor = colorFrom(c as? String, defaultColor: UIColor.whiteColor())
         c = data["backgroundEmptyColor"]
@@ -109,7 +111,7 @@ class ETThemes {
         var a: [ETTheme] = []
         var tmap: Dictionary<String, ETTheme> = [:]
         let themesPath = NSBundle.mainBundle().pathForResource("Themes", ofType: "plist")
-        let themesData = NSDictionary(contentsOfFile: themesPath) as Dictionary<NSObject, AnyObject>
+        let themesData = NSDictionary(contentsOfFile: themesPath!) as Dictionary<NSObject, AnyObject>
         let rawThemes = themesData["Themes"] as NSArray
         for themeDict: AnyObject in rawThemes {
             // Unfortunately can't seem to cast directly to this in iterator.
